@@ -1,0 +1,46 @@
+# 依赖目录
+/vendor/
+/composer.lock
+
+# IDE和编辑器文件
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+.DS_Store
+
+# 日志文件
+*.log
+logs/
+php_errors.log
+
+# 测试相关
+/phpunit.xml
+/phpunit.xml.dist
+/.phpunit.result.cache
+/coverage/
+
+# 环境配置文件
+.env
+.env.*
+!.env.example
+
+# 构建输出
+/build/
+/dist/
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 缓存文件
+.cache/
+*.cache
+
+# 系统文件
+Thumbs.db
+.DS_Store 
