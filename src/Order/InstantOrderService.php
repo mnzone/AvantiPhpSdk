@@ -20,7 +20,7 @@ class InstantOrderService
      */
     public function getList(array $params = []): array
     {
-        $response = $this->client->get('/cgi/v1/instant-orders', [
+        $response = $this->client->get('/cgi-bin/v1/instant-orders', [
             'query' => $params
         ]);
 
@@ -33,7 +33,7 @@ class InstantOrderService
      */
     public function getDetail(int $id): array
     {
-        $response = $this->client->get("/cgi/v1/instant-orders/{$id}");
+        $response = $this->client->get("/cgi-bin/v1/instant-orders/{$id}");
         return json_decode($response->getBody()->getContents(), true);
     }
 
@@ -43,7 +43,7 @@ class InstantOrderService
      */
     public function getDetailByNo(string $no): array
     {
-        $response = $this->client->get("/cgi/v1/instant-orders/no/{$no}");
+        $response = $this->client->get("/cgi-bin/v1/instant-orders/no/{$no}");
         return json_decode($response->getBody()->getContents(), true);
     }
 
@@ -53,7 +53,7 @@ class InstantOrderService
      */
     public function create(array $data): array
     {
-        $response = $this->client->post('/cgi/v1/instant-orders', $data);
+        $response = $this->client->post('/cgi-bin/v1/instant-orders', $data);
         return json_decode($response->getBody()->getContents(), true);
     }
 } 
